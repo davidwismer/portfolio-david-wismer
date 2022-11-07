@@ -1,9 +1,9 @@
-<script setup>
+<script>
 
 </script>
 
 <template>
-  <h1>Salut Jeanne!</h1>
+    <div>Contact</div>
 </template>
 
 <style scoped>
