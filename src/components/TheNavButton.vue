@@ -49,11 +49,11 @@ function toggleButton() {
     height: 3px;
     background-color: #828385;
     margin: 6px 0;
-    transition: 0.4s;
+    transition: 0.6s;
 }
 
 .change .bar1 {
-    background-color: #565656;
+    background-color: #373737;
     transform: translate(0, 9px) rotate(-45deg);
 }
 
@@ -62,7 +62,7 @@ function toggleButton() {
 }
 
 .change .bar3 {
-    background-color: #565656;
+    background-color: #373737;
     transform: translate(0, -9px) rotate(45deg);
 }
 </style>

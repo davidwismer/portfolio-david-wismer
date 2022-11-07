@@ -40,7 +40,7 @@ function toggleNav() {
 
 <template>
   <the-nav-button :change="isNavActive" @click="toggleNav()"></the-nav-button>
-  <the-nav :routes="routes" :curHash="curHash" v-show="isNavActive" @toggleNav="toggleNav()"></the-nav>
+  <the-nav :routes="routes" :curHash="curHash" :class="{'showing': isNavActive}" @toggleNav="toggleNav()"></the-nav>
 
   <main>
     <template v-for="(route, hash) of routes">
@@ -69,6 +69,6 @@ body {
   padding: 0;
   margin: 0;
   color: #C0C0C2;
-  background-color: #565656;
+  background-color: #373737;
 }
 </style>

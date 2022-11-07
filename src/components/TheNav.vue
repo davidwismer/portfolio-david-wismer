@@ -11,15 +11,16 @@ const props = defineProps({
 });
 
 const emit = defineEmits([
-    'toggleNav'
+    'toggleNav',
 ]);
+
 </script>
 
 <template>
     <nav>
         <ul>
             <li v-for="(route, hash) of routes">
-                <a :href="hash" :class="{ active: hash == curHash }" @click="$emit('toggleNav')">
+                <a :href="hash" :class="{ active: hash == curHash}" @click="$emit('toggleNav')">
                     {{ route.label }}
                 </a>
             </li>
@@ -30,12 +31,18 @@ const emit = defineEmits([
 <style scoped>
 nav {
     position: fixed;
+    bottom: 100%;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #828385;
+    background-color: #565656;
     z-index: 1;
+    transition: 0.6s;
+}
+
+nav.showing {
+    transform: translate(0, 100%);
 }
 
 ul {
@@ -58,15 +65,18 @@ li {
 }
 
 a {
+    line-height: 100%;
     width: 100%;
-    height: 100%;
     text-align: center;
     font-size: 32px;
     text-decoration: none;
     color: #C0C0C2;
+    transition: 0.4s;
 }
+
 a:hover {
-    background-color: #565656;
+    padding: 50px;
+    background-color: #373737;
 }
 
 .active {
