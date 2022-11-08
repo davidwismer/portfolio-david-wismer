@@ -71,6 +71,7 @@ a {
     font-size: 32px;
     text-decoration: none;
     color: #C0C0C2;
+    padding: 10px;
     transition: 0.4s;
 }
 
