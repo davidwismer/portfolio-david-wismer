@@ -1,0 +1,151 @@
+[
+    {
+        "categories": [
+            "all",
+            "dev",
+            "ux-ui"
+        ],
+        "projects": [
+            {
+                "id": 1,
+                "photos": [
+                    "src/assets/photos/Animations-1.png",
+                    "src/assets/photos/Animations-2.png",
+                    "src/assets/photos/Animations-3.png"
+                ],
+                "category": [
+                    "dev"
+                ],
+                "technologies": [
+                    "Javascript",
+                    "Live-server"
+                ],
+                "title": "Javascript Animations",
+                "description": "Some animations to learn the concept of HTML canvas with vanilla Javascript and live-server. The first animation is using the Parallax and inFlatTorus concepts, it looks like you navigate in a 3d world of colored circles. In the second one, there are circles bouncing on the edges of the screen. The third one is a mini-game, where you control a shooter and you have to destroy circles comming towards the bottom of the screen.",
+                "link": "",
+                "github": ""
+            },
+            {
+                "id": 2,
+                "photos": [
+                    "src/assets/photos/Shpotify-1.png",
+                    "src/assets/photos/Shpotify-2.png",
+                    "src/assets/photos/Shpotify-3.png"
+                ],
+                "category": [
+                    "dev"
+                ],
+                "technologies": [
+                    "Javascript",
+                    "NodeJS"
+                ],
+                "title": "Shpotify",
+                "description": "I created a copy of a Spotify website as a training for front-end development. (Unfortunately the api from which I fetched the data isn't existing anymore)",
+                "link": "",
+                "github": ""
+            },
+            {
+                "id": 3,
+                "photos": [
+                    "src/assets/photos/InstaCats-1.png",
+                    "src/assets/photos/InstaCats-2.png",
+                    "src/assets/photos/InstaCats-3.png"
+                ],
+                "category": [
+                    "dev"
+                ],
+                "technologies": [
+                    "Javascript",
+                    "NodeJS"
+                ],
+                "title": "Instacats",
+                "description": "I created a copy of an Instagram website called Instacats for an exam in front-end development. (Unfortunately the api from which I fetched the data isn't existing anymore)",
+                "link": "",
+                "github": ""
+            },
+            {
+                "id": 4,
+                "photos": [
+                    "src/assets/photos/WorldCups-1.png",
+                    "src/assets/photos/WorldCups-2.png",
+                    "src/assets/photos/WorldCups-3.png"
+                ],
+                "category": [
+                    "dev",
+                    "ux-ui"
+                ],
+                "technologies": [
+                    "D3",
+                    "NodeJS",
+                    "Javascript"
+                ],
+                "title": "WorldCups",
+                "description": "A web application I created as a project for my second year of Media Engineering Bachelor in Data Visualization. It shows some information on the history of all the football world cups from 1930 to 2018.",
+                "link": "https://worldcup.surge.sh/",
+                "github": "https://github.com/davidwismer/visualdon-projet-anas-david"
+            },
+            {
+                "id": 5,
+                "photos": [
+                    "src/assets/photos/WakandaHoraire-1.png",
+                    "src/assets/photos/WakandaHoraire-2.png",
+                    "src/assets/photos/WakandaHoraire-3.png"
+                ],
+                "category": [
+                    "dev",
+                    "ux-ui"
+                ],
+                "technologies": [
+                    "Laravel",
+                    "VueJS",
+                    "NodeJS",
+                    "MySQL",
+                    "Javascript",
+                    "PHP"
+                ],
+                "title": "Wakanda Horaire",
+                "description": "This is the result of the project I had at the end of my second year as Media Engineering student. We were a team of 8 people and had two months to create a web application that can manage schedules for our school. I was implied in the front-end and back-end development part and in the UX research part of the project. We used the Laravel PHP framework and the Vue.js framework to develop it, and the database we used was implemented on MySQL.",
+                "link": "https://wakanda-pingouin.heig-vd.ch/",
+                "github": "https://github.com/davidwismer/projet-articulation"
+            },
+            {
+                "id": 6,
+                "photos": [
+                    "src/assets/photos/Yatzy-1.png",
+                    "src/assets/photos/Yatzy-2.png",
+                    "src/assets/photos/Yatzy-3.png"
+                ],
+                "category": [
+                    "dev"
+                ],
+                "technologies": [
+                    "Javascript",
+                    "Surge"
+                ],
+                "title": "Yatzy Scoreboard",
+                "description": "A simple application I created to test surge.sh, static web publishing. I often used to play Yatzy with my friends and therefore created this scoreboard to play with it.",
+                "link": "http://yatzy.surge.sh/",
+                "github": ""
+            },
+            {
+                "id": 7,
+                "photos": [
+                    "src/assets/photos/CleanGreens-1.png",
+                    "src/assets/photos/CleanGreens-2.png",
+                    "src/assets/photos/CleanGreens-3.png"
+                ],
+                "category": [
+                    "media"
+                ],
+                "technologies": [
+                    "Figma",
+                    "Adobe"
+                ],
+                "title": "CleanGreens",
+                "description": "Content I created with a group of 4 people for the company CleanGreens in a project for school. CleanGreens participated in an agricultural event that took part in different places in the world to show their technology, and they needed some contents for this purpose. We gave them some posts for social media, prints (a kakemono and a flyer design) and a short video explaining their technology.",
+                "link": "",
+                "github": ""
+            }
+        ]
+    }
+]

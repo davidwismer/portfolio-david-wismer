@@ -5,6 +5,8 @@ import AppPortfolio from './AppPortfolio.vue'
 import AppContact from './AppContact.vue'
 import TheNav from './components/TheNav.vue'
 import TheNavButton from './components/TheNavButton.vue'
+import PreviousPageBtn from './components/PreviousPageBtn.vue'
+import NextPageBtn from './components/NextPageBtn.vue'
 
 //construction des routes
 const routes = {
@@ -40,7 +42,11 @@ function toggleNav() {
 
 <template>
   <the-nav-button :change="isNavActive" @click="toggleNav()"></the-nav-button>
-  <the-nav :routes="routes" :curHash="curHash" :class="{'showing': isNavActive}" @toggleNav="toggleNav()"></the-nav>
+  <previous-page-btn v-if="curHash == '#portfolio' || curHash == '#contact'" :curHash="curHash"></previous-page-btn>
+  <next-page-btn v-if="curHash == '#about' || curHash == '#portfolio'" :curHash="curHash"></next-page-btn>
+  <the-nav :routes="routes" :curHash="curHash"
+    :class="{ 'showing': isNavActive }"
+    @toggleNav="toggleNav()"></the-nav>
 
   <main>
     <template v-for="(route, hash) of routes">
@@ -59,10 +65,20 @@ function toggleNav() {
     url(./fonts/LeagueSpartan-Bold.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "League Spartan Regular";
+  src: local("League Spartan Regular"),
+    url(./fonts/LeagueSpartan-Regular.otf) format("truetype");
+}
+
 html {
   font-family: "League Spartan";
   margin: 0;
   padding: 0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {

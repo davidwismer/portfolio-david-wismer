@@ -1,11 +1,17 @@
 <script>
-
 </script>
 
 <template>
-    <section>
-        <div class="presentation">Hi, my name is <strong class="name">David Wismer</strong>.<br>I'm a Media engineering
-            student at the HEIG-VD who aspires to become a web developer.</div>
+    <section class="about-content">
+        <div class="presentation">
+            <div class="top-line">
+                Hi, my name is <strong class="name">David
+                    Wismer</strong>.</div>
+            <div class="core-line">I'm a Media engineering student at the HEIG-VD
+                who aspires to
+                become a web developer.
+            </div>
+        </div>
     </section>
 </template>
 
@@ -23,7 +29,15 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+}
+
+.top-line {
+    font-size: 24px;
+}
+
+.core-line {
+    font-size: 24px;
+    font-family: "League Spartan Regular";
 }
 
 .name {

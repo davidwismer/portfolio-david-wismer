@@ -1,4 +1,5 @@
 <script setup>
+
 const props = defineProps({
     routes: {
         type: Object,
@@ -36,8 +37,8 @@ nav {
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #565656;
-    z-index: 1;
+    background: linear-gradient(#373737, #565656);
+    z-index: 2;
     transition: 0.6s;
 }
 

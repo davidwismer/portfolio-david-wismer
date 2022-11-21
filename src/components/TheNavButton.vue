@@ -39,7 +39,7 @@ function toggleButton() {
     margin-left: -135px; /* -35px -100 */
     display: inline-block;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
 }
 
 .bar1,
@@ -53,7 +53,6 @@ function toggleButton() {
 }
 
 .change .bar1 {
-    background-color: #373737;
     transform: translate(0, 9px) rotate(-45deg);
 }
 
@@ -62,7 +61,6 @@ function toggleButton() {
 }
 
 .change .bar3 {
-    background-color: #373737;
     transform: translate(0, -9px) rotate(45deg);
 }
 </style>
