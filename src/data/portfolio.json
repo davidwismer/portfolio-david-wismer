@@ -9,9 +9,9 @@
             {
                 "id": 1,
                 "photos": [
-                    "/Animations-1.gif",
-                    "src/assets/photos/Animations-2.gif",
-                    "src/assets/photos/Animations-3.gif"
+                    "src/assets/Animations-1.gif",
+                    "src/assets/Animations-2.gif",
+                    "src/assets/Animations-3.gif"
                 ],
                 "category": [
                     "dev"
@@ -28,9 +28,9 @@
             {
                 "id": 2,
                 "photos": [
-                    "src/assets/photos/Shpotify-1.png",
-                    "src/assets/photos/Shpotify-2.png",
-                    "src/assets/photos/Shpotify-3.png"
+                    "src/assets/Shpotify-1.png",
+                    "src/assets/Shpotify-2.png",
+                    "src/assets/Shpotify-3.png"
                 ],
                 "category": [
                     "dev"
@@ -47,9 +47,9 @@
             {
                 "id": 3,
                 "photos": [
-                    "src/assets/photos/InstaCats-1.png",
-                    "src/assets/photos/InstaCats-2.png",
-                    "src/assets/photos/InstaCats-3.png"
+                    "src/assets/InstaCats-1.png",
+                    "src/assets/InstaCats-2.png",
+                    "src/assets/InstaCats-3.png"
                 ],
                 "category": [
                     "dev"
@@ -66,9 +66,9 @@
             {
                 "id": 4,
                 "photos": [
-                    "src/assets/photos/WorldCups-1.png",
-                    "src/assets/photos/WorldCups-2.png",
-                    "src/assets/photos/WorldCups-3.png"
+                    "src/assets/WorldCups-1.png",
+                    "src/assets/WorldCups-2.png",
+                    "src/assets/WorldCups-3.png"
                 ],
                 "category": [
                     "dev",
@@ -87,9 +87,9 @@
             {
                 "id": 5,
                 "photos": [
-                    "src/assets/photos/WakandaHoraire-1.png",
-                    "src/assets/photos/WakandaHoraire-2.png",
-                    "src/assets/photos/WakandaHoraire-3.png"
+                    "src/assets/WakandaHoraire-1.png",
+                    "src/assets/WakandaHoraire-2.png",
+                    "src/assets/WakandaHoraire-3.png"
                 ],
                 "category": [
                     "dev",
@@ -111,9 +111,9 @@
             {
                 "id": 6,
                 "photos": [
-                    "src/assets/photos/Yatzy-1.png",
-                    "src/assets/photos/Yatzy-2.png",
-                    "src/assets/photos/Yatzy-3.png"
+                    "src/assets/Yatzy-1.png",
+                    "src/assets/Yatzy-2.png",
+                    "src/assets/Yatzy-3.png"
                 ],
                 "category": [
                     "dev"
@@ -130,9 +130,9 @@
             {
                 "id": 7,
                 "photos": [
-                    "src/assets/photos/CleanGreens-1.png",
-                    "src/assets/photos/CleanGreens-2.png",
-                    "src/assets/photos/CleanGreens-3.png"
+                    "src/assets/CleanGreens-1.png",
+                    "src/assets/CleanGreens-2.png",
+                    "src/assets/CleanGreens-3.png"
                 ],
                 "category": [
                     "media"
