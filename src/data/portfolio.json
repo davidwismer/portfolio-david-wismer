@@ -9,7 +9,7 @@
             {
                 "id": 1,
                 "photos": [
-                    "./Animations-1.gif",
+                    "/Animations-1.gif",
                     "src/assets/photos/Animations-2.gif",
                     "src/assets/photos/Animations-3.gif"
                 ],
