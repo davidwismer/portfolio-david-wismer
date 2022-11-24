@@ -70,4 +70,10 @@ section {
     font-size: 32px;
     margin-bottom: 30px;
 }
+@media screen and (max-width: 450px){
+    .title{
+        font-size: 24px;
+    }
+}
+
 </style>

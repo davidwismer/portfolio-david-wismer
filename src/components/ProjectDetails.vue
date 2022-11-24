@@ -20,15 +20,15 @@ function prevPic() {
     if (indexPhoto.value == 0) {
         indexPhoto.value = photos.value.length - 1
     } else {
-        indexPhoto.value -=1
+        indexPhoto.value -= 1
     }
     backgroundImage.value = `url("${photos.value[indexPhoto.value]}")`
 }
 function nextPic() {
-    if (indexPhoto.value == photos.value.length-1) {
+    if (indexPhoto.value == photos.value.length - 1) {
         indexPhoto.value = 0
     } else {
-        indexPhoto.value +=1
+        indexPhoto.value += 1
     }
     backgroundImage.value = `url("${photos.value[indexPhoto.value]}")`
 }
@@ -57,7 +57,8 @@ function nextPic() {
                         WEBSITE
                         <font-awesome-icon icon="fa-solid fa-globe" />
                     </a>
-                    <a v-if="props.project.github !== ''" :href=props.project.github target="_blank" class="github">VISIT
+                    <a v-if="props.project.github !== ''" :href=props.project.github target="_blank"
+                        class="github">VISIT
                         GITHUB
                         <font-awesome-icon icon="fab fa-github" />
                     </a>
@@ -239,10 +240,7 @@ function nextPic() {
     transition: 0.4s;
 }
 
-.website:hover {
-    background-color: #ACBABF;
-    color: white;
-}
+
 
 .github {
     text-decoration: none;
@@ -258,50 +256,68 @@ function nextPic() {
     transition: 0.4s;
 }
 
-.github:hover {
-    background-color: #ACBABF;
-    color: white;
-}
-svg{
+
+svg {
     margin-left: 5px;
 }
 
+@media screen and (min-width: 450px) {
+    .github:hover {
+        background-color: #ACBABF;
+        color: white;
+    }
+
+    .website:hover {
+        background-color: #ACBABF;
+        color: white;
+    }
+}
+
 @media screen and (max-width: 450px) {
-    .container{
+    .container {
         width: 90%;
         height: 80%;
     }
-    .title{
+
+    .title {
         font-size: 16px;
     }
-    .description{
+
+    .description {
         font-size: 14px;
     }
-    .body{
+
+    .body {
         height: 50%;
     }
-    .header{
+
+    .header {
         height: 50%;
     }
-    .prevPic{
+
+    .prevPic {
         height: 50%;
         width: 30px;
     }
-    .nextPic{
+
+    .nextPic {
         height: 50%;
         width: 30px;
     }
-    .website{
+
+    .website {
         font-size: 14px;
         padding: 5px;
         width: 110px;
     }
-    .github{
+
+    .github {
         font-size: 14px;
         padding: 5px;
         width: 110px;
     }
-    .links{
+
+    .links {
         gap: 5px;
     }
 }

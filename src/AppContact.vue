@@ -116,4 +116,29 @@ input::placeholder {
     background-color: #ACBABF;
     color: #373737;
 }
+
+@media screen and (max-width: 700px) {
+    form {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form {
+        width: 250px;
+    }
+    .title{
+        font-size: 24px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .subtitle{
+        font-size: 14px;
+    }
+}
+@media screen and (max-height: 750px){
+    #message{
+        height: 200px;
+    }
+}
 </style>
