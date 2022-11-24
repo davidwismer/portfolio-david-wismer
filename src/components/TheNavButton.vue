@@ -35,8 +35,8 @@ function toggleButton() {
     position: fixed;
     left: 100%;
     top: 0%;
-    margin-top: 44px; /* 50px - 6 */
-    margin-left: -135px; /* -35px -100 */
+    margin-top: 50px;
+    margin-left: -110px;
     display: inline-block;
     cursor: pointer;
     z-index: 3;

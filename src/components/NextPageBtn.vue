@@ -12,10 +12,15 @@ function nextPage() {
     if (props.curHash == "#portfolio") nextHash = "#contact"
     location.hash = nextHash
 }
+//Hover effect on button
+const hover = ref(false)
+function hoverEffect() {
+    hover.value = !hover.value
+}
 </script>
 
 <template>
-    <div class="container" @click="nextPage()">
+    <div class="container" :class="{'hoverEffect': hover}" @mouseenter="hoverEffect()" @mouseleave="hoverEffect()" @click="nextPage()">
         <div class="bar1"></div>
         <div class="bar2"></div>
     </div>
@@ -27,16 +32,20 @@ function nextPage() {
     left: 100%;
     top: 50%;
     transform: translate(-100%, -50%);
-    width: 5%;
-    height: 60%;
+    width: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     z-index: 2;
     cursor: pointer;
+    transition: 0.4s;
 }
-
+.hoverEffect{
+    background: linear-gradient(to right, transparent, #303030);
+    width: 75px;
+}
 .bar1,
 .bar2 {
     width: 35px;

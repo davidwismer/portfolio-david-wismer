@@ -13,8 +13,25 @@ const emit = defineEmits([
 ]);
 
 //Manage the photos of the card
-const photo = ref(props.project.photos[0])
-const backgroundImage = `url("${photo.value}")`
+const photos = ref(props.project.photos)
+const indexPhoto = ref(0)
+let backgroundImage = ref(`url("${photos.value[indexPhoto.value]}")`)
+function prevPic() {
+    if (indexPhoto.value == 0) {
+        indexPhoto.value = photos.value.length - 1
+    } else {
+        indexPhoto.value -=1
+    }
+    backgroundImage.value = `url("${photos.value[indexPhoto.value]}")`
+}
+function nextPic() {
+    if (indexPhoto.value == photos.value.length-1) {
+        indexPhoto.value = 0
+    } else {
+        indexPhoto.value +=1
+    }
+    backgroundImage.value = `url("${photos.value[indexPhoto.value]}")`
+}
 </script>
 
 <template>
@@ -23,11 +40,11 @@ const backgroundImage = `url("${photo.value}")`
         <div class="container">
             <div class="header">
                 <div class="picture"></div>
-                <div class="prevPic">
+                <div class="prevPic" @click="prevPic()">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                 </div>
-                <div class="nextPic">
+                <div class="nextPic" @click="nextPic()">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                 </div>
@@ -37,22 +54,54 @@ const backgroundImage = `url("${photo.value}")`
                 <div class="description">{{ props.project.description }}</div>
                 <div class="links">
                     <a v-if="props.project.link !== ''" :href=props.project.link target="_blank" class="website">VISIT
-                        WEBSITE</a>
-                    <a v-if="props.project.github !== ''" :href=props.project.github target="_blank" class="github">VIEW
-                        GITHUB</a>
+                        WEBSITE
+                        <font-awesome-icon icon="fa-solid fa-globe" />
+                    </a>
+                    <a v-if="props.project.github !== ''" :href=props.project.github target="_blank" class="github">VISIT
+                        GITHUB
+                        <font-awesome-icon icon="fab fa-github" />
+                    </a>
                 </div>
-
+                <div class="exit" @click="$emit('suppressDetails')">
+                    <div class="exitContainer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <style scoped>
+.exit {
+    position: fixed;
+    left: 100%;
+    top: 100%;
+    transform: translate(-100%, -100%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exit .bar1 {
+    transform: rotate(-45deg) translate(0, 2px);
+    background-color: #A0A1A4;
+}
+
+.exit .bar2 {
+    transform: rotate(45deg) translate(0, -2px);
+    background-color: #A0A1A4;
+}
+
 .bar1,
 .bar2 {
     width: 19px;
     height: 3px;
-    background-color: #828385;
+    background-color: white;
 }
 
 .prevPic .bar1 {
@@ -74,31 +123,33 @@ const backgroundImage = `url("${photo.value}")`
 .prevPic {
     position: fixed;
     left: 0%;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 5%;
-    height: 100%;
+    top: 0;
+    transform: translate(0, 0);
+    width: 50px;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     z-index: 2;
     cursor: pointer;
+    background-image: linear-gradient(to left, transparent, #A0A1A4);
 }
 
 .nextPic {
     position: fixed;
     left: 100%;
-    top: 50%;
-    transform: translate(-100%, -50%);
-    width: 5%;
+    top: 0;
+    transform: translate(-100%, 0);
+    width: 50px;
     height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     z-index: 2;
     cursor: pointer;
+    background-image: linear-gradient(to right, transparent, #A0A1A4);
 }
 
 .background {
@@ -176,7 +227,7 @@ const backgroundImage = `url("${photo.value}")`
 
 .website {
     text-decoration: none;
-    width: 100px;
+    width: 130px;
     text-align: center;
     padding: 10px 10px 7px 10px;
     color: #ACBABF;
@@ -195,7 +246,7 @@ const backgroundImage = `url("${photo.value}")`
 
 .github {
     text-decoration: none;
-    width: 100px;
+    width: 130px;
     text-align: center;
     padding: 10px 10px 7px 10px;
     color: #ACBABF;
@@ -210,5 +261,8 @@ const backgroundImage = `url("${photo.value}")`
 .github:hover {
     background-color: #ACBABF;
     color: white;
+}
+svg{
+    margin-left: 5px;
 }
 </style>

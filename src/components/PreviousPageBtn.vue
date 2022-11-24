@@ -7,15 +7,20 @@ const props = defineProps({
     }
 });
 
-function prevPage(){
+function prevPage() {
     let prevHash = "#portfolio"
-    if(props.curHash == "#portfolio") prevHash = "#about"
+    if (props.curHash == "#portfolio") prevHash = "#about"
     location.hash = prevHash
+}
+//Hover effect on button
+const hover = ref(false)
+function hoverEffect() {
+    hover.value = !hover.value
 }
 </script>
 
 <template>
-    <div class="container" @click="prevPage()">
+    <div class="container" :class="{'hoverEffect': hover}" @mouseenter="hoverEffect()" @mouseleave="hoverEffect()" @click="prevPage()">
         <div class="bar1"></div>
         <div class="bar2"></div>
     </div>
@@ -27,26 +32,32 @@ function prevPage(){
     left: 0%;
     top: 50%;
     transform: translate(0, -50%);
-    width: 5%;
-    height: 60%;
+    width: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     z-index: 2;
     cursor: pointer;
+    transition: 0.4s;
 }
-
+.hoverEffect{
+    background: linear-gradient(to left, transparent, #303030);
+    width: 75px;
+}
 .bar1,
 .bar2 {
     width: 35px;
     height: 3px;
     background-color: #828385;
 }
-.bar1{
+
+.bar1 {
     transform: rotate(-45deg) translate(0, -14px);
 }
-.bar2{
+
+.bar2 {
     transform: rotate(45deg) translate(0, 14px);
 }
 </style>
