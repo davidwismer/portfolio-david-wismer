@@ -229,7 +229,7 @@ function nextPic() {
     text-decoration: none;
     width: 130px;
     text-align: center;
-    padding: 10px 10px 7px 10px;
+    padding: 10px 10px 10px 10px;
     color: #ACBABF;
     font-family: "League Spartan Regular";
     border: 1px solid #ACBABF;
@@ -248,7 +248,7 @@ function nextPic() {
     text-decoration: none;
     width: 130px;
     text-align: center;
-    padding: 10px 10px 7px 10px;
+    padding: 10px 10px 10px 10px;
     color: #ACBABF;
     font-family: "League Spartan Regular";
     border: 1px solid #ACBABF;
@@ -264,5 +264,45 @@ function nextPic() {
 }
 svg{
     margin-left: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .container{
+        width: 90%;
+        height: 80%;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .description{
+        font-size: 14px;
+    }
+    .body{
+        height: 50%;
+    }
+    .header{
+        height: 50%;
+    }
+    .prevPic{
+        height: 50%;
+        width: 30px;
+    }
+    .nextPic{
+        height: 50%;
+        width: 30px;
+    }
+    .website{
+        font-size: 14px;
+        padding: 5px;
+        width: 110px;
+    }
+    .github{
+        font-size: 14px;
+        padding: 5px;
+        width: 110px;
+    }
+    .links{
+        gap: 5px;
+    }
 }
 </style>

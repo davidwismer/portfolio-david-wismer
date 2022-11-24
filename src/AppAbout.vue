@@ -62,15 +62,18 @@ section {
     flex-direction: column;
     gap: 20px;
 }
-svg{
+
+svg {
     font-size: 50px;
     margin-right: 15px;
 }
-.linkText{
+
+.linkText {
     opacity: 0;
     transition: 0.4s;
     margin-left: 10px;
 }
+
 a {
     border-radius: 0 5px 5px 0;
     display: flex;
@@ -83,11 +86,46 @@ a {
     background-color: #C0C0C2;
     transition: 0.4s;
 }
-a:hover{
-    width: 150px;
+
+@media screen and (min-width: 450px) {
+    a:hover {
+        width: 150px;
+    }
+
+    a:hover div {
+        opacity: 1;
+        transition: 1s;
+    }
 }
-a:hover div{
-    opacity: 1;
-    transition: 1s;
+
+@media screen and (max-width: 450px) {
+    .presentation {
+        width: 90%;
+    }
+
+    .core-line,
+    .top-line {
+        font-size: 18px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .links {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        flex-direction: row;
+    }
+
+    a {
+        border-radius: 5px 5px 0 0;
+    }
+}
+@media screen and (max-width: 700px){
+    .presentation {
+        width: 300px;
+    }
 }
 </style>

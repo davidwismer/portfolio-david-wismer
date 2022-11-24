@@ -60,4 +60,10 @@ function hoverEffect() {
 .bar2 {
     transform: rotate(-45deg) translate(0, 14px);
 }
+
+@media screen and (max-width: 450px) {
+    .container{
+        display: none;
+    }
+}
 </style>

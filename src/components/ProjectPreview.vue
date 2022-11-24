@@ -94,7 +94,7 @@ const backgroundImage = `url("${photo.value}")`
     margin-top: 50px;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* On screens that are 450px or less */
 @media screen and (max-width: 450px) {
     .text {
         font-size: 14px;

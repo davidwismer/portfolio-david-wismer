@@ -63,4 +63,11 @@ function toggleButton() {
 .change .bar3 {
     transform: translate(0, -9px) rotate(45deg);
 }
+
+@media screen and (max-width: 450px) {
+    .container{
+        margin-top: 20px;
+        margin-left: -60px;
+    }
+}
 </style>
