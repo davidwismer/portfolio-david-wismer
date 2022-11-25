@@ -23,6 +23,7 @@
                 ],
                 "title": "My Portfolio",
                 "description": "A portfolio website I create for myself. If contains some projects I have done in my life concerning web developpment, ux-ui design or even media content I created. I used Render to deploy it, since it is a free cloud hosting application.",
+                "link": "https://davidwismer.onrender.com",
                 "github": "https://github.com/davidwismer/portfolio-david-wismer"
             },
             {
