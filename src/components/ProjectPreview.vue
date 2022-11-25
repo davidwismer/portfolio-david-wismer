@@ -52,6 +52,7 @@ const backgroundImage = `url("${photo.value}")`
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+    border: 1px solid #ACBABF;
     display: flex;
     flex-direction: column;
     align-items: center;
