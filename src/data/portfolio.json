@@ -7,7 +7,26 @@
         ],
         "projects": [
             {
-                "id": 1,
+                "photos": [
+                    "/assets/Portfolio-1.png",
+                    "/assets/Portfolio-2.png",
+                    "/assets/Portfolio-3.png"
+                ],
+                "category": [
+                    "dev",
+                    "ux-ui"
+                ],
+                "technologies": [
+                    "Vue.js",
+                    "Node.js",
+                    "Render"
+                ],
+                "title": "My Portfolio",
+                "description": "A portfolio website I create for myself. If contains some projects I have done in my life concerning web developpment, ux-ui design or even media content I created. I used Render to deploy it, since it is a free cloud hosting application.",
+                "link": "http://localhost:3000/?#about",
+                "github": "https://github.com/davidwismer/portfolio-david-wismer"
+            },
+            {
                 "photos": [
                     "/assets/Animations-1.gif",
                     "/assets/Animations-2.gif",
@@ -26,7 +45,6 @@
                 "github": ""
             },
             {
-                "id": 2,
                 "photos": [
                     "/assets/Shpotify-1.png",
                     "/assets/Shpotify-2.png",
@@ -45,7 +63,6 @@
                 "github": ""
             },
             {
-                "id": 3,
                 "photos": [
                     "/assets/InstaCats-1.png",
                     "/assets/InstaCats-2.png",
@@ -64,7 +81,6 @@
                 "github": ""
             },
             {
-                "id": 4,
                 "photos": [
                     "/assets/WorldCups-1.png",
                     "/assets/WorldCups-2.png",
@@ -85,7 +101,6 @@
                 "github": "https://github.com/davidwismer/visualdon-projet-anas-david"
             },
             {
-                "id": 5,
                 "photos": [
                     "/assets/Horaire-1.png",
                     "/assets/Horaire-2.png",
@@ -109,7 +124,6 @@
                 "github": "https://github.com/davidwismer/projet-articulation"
             },
             {
-                "id": 6,
                 "photos": [
                     "/assets/Yatzy-1.png",
                     "/assets/Yatzy-2.png",
