@@ -66,7 +66,7 @@
             {
                 "id": 4,
                 "photos": [
-                    "/assets/WakandaHoraire-1.png",
+                    "/assets/WorldCups-1.png",
                     "/assets/WorldCups-2.png",
                     "/assets/WorldCups-3.png"
                 ],
@@ -87,9 +87,9 @@
             {
                 "id": 5,
                 "photos": [
-                    "/assets/WakandaHoraire-1.png",
-                    "/assets/WakandaHoraire-2.png",
-                    "/assets/WakandaHoraire-3.png"
+                    "/assets/Horaire-1.png",
+                    "/assets/Horaire-2.png",
+                    "/assets/Horaire-3.png"
                 ],
                 "category": [
                     "dev",
