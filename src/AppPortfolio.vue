@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import portfolio from "./data/portfolio.json"
+import portfolio from "/public/data/portfolio.json"
 import CategoryButton from './components/CategoryButton.vue';
 import ProjectPreview from './components/ProjectPreview.vue'
 
