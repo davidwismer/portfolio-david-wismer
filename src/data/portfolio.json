@@ -22,7 +22,7 @@
                     "Render"
                 ],
                 "title": "My Portfolio",
-                "description": "A portfolio website I create for myself. If contains some projects I have done in my life concerning web developpment, ux-ui design or even media content I created. I used Render to deploy it, since it is a free cloud hosting application.",
+                "description": "A portfolio website I create for myself. It contains some projects I have done in my life concerning web development, ux-ui design or even media content I created. I used Render to deploy it, since it is a free cloud hosting application.",
                 "link": "https://davidwismer.onrender.com",
                 "github": "https://github.com/davidwismer/portfolio-david-wismer"
             },
@@ -40,7 +40,7 @@
                     "Live-server"
                 ],
                 "title": "Javascript Animations",
-                "description": "Some animations to learn the concept of HTML canvas with vanilla Javascript and live-server. The first animation is using the Parallax and inFlatTorus concepts, it looks like you navigate in a 3d world of colored circles. In the second one, there are circles bouncing on the edges of the screen. The third one is a mini-game, where you control a shooter and you have to destroy circles comming towards the bottom of the screen.",
+                "description": "Some animations to learn the concept of HTML canvas with vanilla Javascript and live-server. The first animation is using the Parallax and inFlatTorus concepts, it looks like you navigate in a 3d world of colored circles. In the second one, there are circles bouncing on the edges of the screen. The third one is a mini-game, where you control a shooter and you have to destroy circles coming towards the bottom of the screen.",
                 "link": "",
                 "github": ""
             },
