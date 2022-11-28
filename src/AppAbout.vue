@@ -60,7 +60,7 @@ section {
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 svg {
@@ -85,6 +85,16 @@ a {
     color: #565656;
     background-color: #C0C0C2;
     transition: 0.4s;
+}
+
+.linkedin {
+    background-color: #0077B5;
+    color: white;
+}
+
+.github {
+    background-color: #333;
+    color: #f5f5f5;
 }
 
 @media screen and (min-width: 450px) {
@@ -123,7 +133,8 @@ a {
         border-radius: 5px 5px 0 0;
     }
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 700px) {
     .presentation {
         width: 300px;
     }

@@ -297,12 +297,12 @@ svg {
 
     .prevPic {
         height: 50%;
-        width: 30px;
+        width: 50px;
     }
 
     .nextPic {
         height: 50%;
-        width: 30px;
+        width: 50px;
     }
 
     .website {

@@ -18,7 +18,6 @@ const emit = defineEmits([
     border: 1px solid #ACBABF;
     background-color: #373737;
     border-radius: 5px;
-    box-shadow: 3px 3px #303030;
     cursor: pointer;
 }
 
