@@ -48,6 +48,10 @@ function nextPic() {
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                 </div>
+                <div class="points">
+                    <div v-for="photo of photos" class="point" :class="{ 'selectedPoint': (parseInt(photo.split('.')[0].slice(-1)) - 1) == indexPhoto}">
+                    </div>
+                </div>
             </div>
             <div class="body">
                 <div class="title">{{ props.project.title }}</div>
@@ -75,6 +79,26 @@ function nextPic() {
 </template>
 
 <style scoped>
+.points {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.point {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #C0C0C2;
+    opacity: 50%;
+    transition: 0.4s;
+}
+.selectedPoint{
+    opacity: 100%;
+    transition: 0.4s;
+}
 .exit {
     position: fixed;
     left: 100%;
