@@ -33,6 +33,7 @@ async function sendContact() {
 const nameFalse = ref(false)
 const emailFalse = ref(false)
 const messageFalse = ref(false)
+const translation = ref("0px")
 async function checkValidation() {
     ///////////////////////////Validation champs vides
     if (name.value == '') nameFalse.value = true
@@ -42,7 +43,14 @@ async function checkValidation() {
     if(!nameFalse.value && !emailFalse.value && !messageFalse.value){
         return validated.value = true
     }else{
-        return validated.value = false
+        if(translation.value == "0px"){
+            const random = Math.floor(Math.random() * 2)
+            if(random) return translation.value = '-100px'
+            return translation.value = "100px"
+        }
+        if(translation.value == "100px" || translation.value == '-100px'){
+            return translation.value = "0px"
+        }
     }
 }
 async function resetValidation(){
@@ -60,6 +68,10 @@ watchEffect(() => {
     message.value
     messageFalse.value=false
 });
+watchEffect(() => {
+    message.value, email.value, name.value
+    if(!nameFalse.value && !emailFalse.value && !messageFalse.value) translation.value = '0px'
+})
 </script>
 
 <template>
@@ -74,6 +86,7 @@ watchEffect(() => {
                 :class="{ 'messageFalse': messageFalse }"></textarea>
             <button class="submit" @mouseenter="checkValidation()" @mouseleave="resetValidation()" @click="sendContact()" :class="{ 'submitable': validated }">SUBMIT</button>
         </form>
+        <div v-if="nameFalse || emailFalse || messageFalse" class="errorMessage">You need to complete the fields first</div>
     </section>
 </template>
 
@@ -92,6 +105,13 @@ section {
     font-size: 32px;
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+.errorMessage {
+    font-size: 14px;
+    font-family: "League Spartan Regular";
+    opacity: 75%;
+    margin-top: 10px;
 }
 
 form {
@@ -159,8 +179,9 @@ input::placeholder {
     border: 1px solid #ACBABF;
     background-color: #373737;
     border-radius: 5px;
-    transition: 0.4s;
     margin-top: 5px;
+    transition: 0.4s;
+    transform: translate(v-bind(translation), 0);
 }
 
 .submitable {
