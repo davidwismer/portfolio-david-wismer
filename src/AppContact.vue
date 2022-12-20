@@ -183,6 +183,12 @@ input::placeholder {
     transform: translate(v-bind(translation), 0);
 }
 
+@media (pointer:coarse) {
+    .submit{
+        transform: translate(0,0)
+    }
+}
+
 .submitable {
     background-color: #ACBABF;
     color: #373737;
