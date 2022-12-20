@@ -21,8 +21,7 @@ async function sendContact() {
             message: message.value
         }
         //Send email to david.wismer@heig-vd.ch with name email and message of form
-        /* await emailjs.send("service_0vclyoe", "template_tdxxws5", templateParams, "getTfFC6EG71QKEVm") */
-        console.log('email envoyé')
+        await emailjs.send("service_0vclyoe", "template_tdxxws5", templateParams, "getTfFC6EG71QKEVm")
         name.value = ''
         email.value = ''
         message.value = ''
@@ -45,10 +44,10 @@ async function checkValidation() {
     }else{
         if(translation.value == "0px"){
             const random = Math.floor(Math.random() * 2)
-            if(random) return translation.value = '-100px'
-            return translation.value = "100px"
+            if(random) return translation.value = '-120px'
+            return translation.value = "120px"
         }
-        if(translation.value == "100px" || translation.value == '-100px'){
+        if(translation.value == "120px" || translation.value == '-120px'){
             return translation.value = "0px"
         }
     }
