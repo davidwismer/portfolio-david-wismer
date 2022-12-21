@@ -8,8 +8,8 @@ const props = defineProps({
 });
 
 function prevPage() {
-    let prevHash = "#portfolio"
-    if (props.curHash == "#portfolio") prevHash = "#about"
+    let prevHash = "#projects"
+    if (props.curHash == "#projects") prevHash = "#about"
     location.hash = prevHash
 }
 //Hover effect on button

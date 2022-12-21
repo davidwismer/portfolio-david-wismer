@@ -15,9 +15,9 @@ const routes = {
     id: "about",
     component: AppAbout,
   },
-  "#portfolio": {
-    label: "Portfolio",
-    id: "portfolio",
+  "#projects": {
+    label: "Projects",
+    id: "projects",
     component: AppPortfolio,
   },
   "#contact": {
@@ -42,8 +42,8 @@ function toggleNav() {
 
 <template>
   <the-nav-button :change="isNavActive" @click="toggleNav()"></the-nav-button>
-  <previous-page-btn v-if="curHash == '#portfolio' || curHash == '#contact'" :curHash="curHash"></previous-page-btn>
-  <next-page-btn v-if="curHash == '#about' || curHash == '#portfolio'" :curHash="curHash"></next-page-btn>
+  <previous-page-btn v-if="curHash == '#projects' || curHash == '#contact'" :curHash="curHash"></previous-page-btn>
+  <next-page-btn v-if="curHash == '#about' || curHash == '#projects'" :curHash="curHash"></next-page-btn>
   <the-nav :routes="routes" :curHash="curHash"
     :class="{ 'showing': isNavActive }"
     @toggleNav="toggleNav()"></the-nav>
