@@ -1,4 +1,5 @@
-<script>
+<script setup>
+
 </script>
 
 <template>
@@ -9,6 +10,8 @@
                     Wismer</strong>.</div>
             <div class="core-line">I'm a Media engineering student at the HEIG-VD
                 who aspires to become a web developer.
+            </div>
+            <div class="core-line contact">david@thewismer.ch | +41786952822
             </div>
         </div>
         <div class="links">
@@ -47,6 +50,11 @@ section {
 .core-line {
     font-size: 24px;
     font-family: "League Spartan Regular";
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-size: 20px;
 }
 
 .name {
