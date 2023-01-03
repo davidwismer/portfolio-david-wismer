@@ -40,6 +40,12 @@ function toggleButton() {
     display: inline-block;
     cursor: pointer;
     z-index: 3;
+    transition: 0.4s;
+}
+
+.container:hover {
+    scale: 1.2;
+    transition: 0.4s;
 }
 
 .bar1,

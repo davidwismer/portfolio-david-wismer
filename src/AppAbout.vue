@@ -45,12 +45,13 @@ section {
 
 .top-line {
     font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .core-line {
     font-size: 24px;
     font-family: "League Spartan Regular";
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .contact {

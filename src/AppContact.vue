@@ -78,8 +78,8 @@ watchEffect(() => {
         <div class="title">Contact me</div>
         <div class="subtitle">Any questions or want to work together?</div>
         <form onsubmit="return false">
-            <input type="text" placeholder="Name *" id="name" v-model="name" :class="{ 'nameFalse': nameFalse }" />
-            <input type="email" placeholder="Enter your email *" id="email" v-model="email"
+            <input type="text" placeholder="Your Name *" id="name" v-model="name" :class="{ 'nameFalse': nameFalse }" />
+            <input type="email" placeholder="Your Email *" id="email" v-model="email"
                 :class="{ 'emailFalse': emailFalse }" />
             <textarea placeholder="Your Message *" id="message" cols="30" rows="10" v-model="message"
                 :class="{ 'messageFalse': messageFalse }"></textarea>

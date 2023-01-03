@@ -159,6 +159,7 @@ function nextPic() {
     z-index: 2;
     cursor: pointer;
     background-image: linear-gradient(to left, transparent, #A0A1A4);
+    border-radius: 5px 0 0 0;
 }
 
 .nextPic {
@@ -175,6 +176,7 @@ function nextPic() {
     z-index: 2;
     cursor: pointer;
     background-image: linear-gradient(to right, transparent, #A0A1A4);
+    border-radius: 0 5px 0 0;
 }
 
 .background {
@@ -199,6 +201,7 @@ function nextPic() {
     z-index: 11;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 .header {
