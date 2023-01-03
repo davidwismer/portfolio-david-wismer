@@ -13,6 +13,7 @@
             </div>
             <div class="core-line contact">david@thewismer.ch | +41786952822
             </div>
+            <a href="/assets/Resume.pdf" target="_blank" class="resume">RESUME</a>
         </div>
         <div class="links">
             <a class="linkedin" href="https://www.linkedin.com/in/david-wismer-25ba29200/" target="_blank">
@@ -72,6 +73,12 @@ section {
     gap: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: #565656;
+    background-color: #C0C0C2;
+}
+
 svg {
     font-size: 50px;
     margin-right: 15px;
@@ -83,16 +90,14 @@ svg {
     margin-left: 10px;
 }
 
-a {
+.linkedin,
+.github {
     border-radius: 0 5px 5px 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    text-decoration: none;
     width: 75px;
     height: 75px;
-    color: #565656;
-    background-color: #C0C0C2;
     transition: 0.4s;
 }
 
@@ -106,14 +111,39 @@ a {
     color: #f5f5f5;
 }
 
+.resume {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #ACBABF;
+    background-color: #373737;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-family: "League Spartan Regular";
+    border: 1px solid #ACBABF;
+    font-size: 20px;
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
 @media screen and (min-width: 450px) {
-    a:hover {
+
+    .linkedin:hover,
+    .github:hover {
         width: 150px;
     }
 
     a:hover div {
         opacity: 1;
         transition: 1s;
+    }
+
+    .resume:hover {
+        background-color: #ACBABF;
+        color: #373737;
+        scale: 1.2;
+        transform: translate(-40%, 0);
     }
 }
 
@@ -138,8 +168,13 @@ a {
         flex-direction: row;
     }
 
-    a {
+    .linkedin,
+    .github {
         border-radius: 5px 5px 0 0;
+    }
+
+    .resume {
+        scale: 0.8;
     }
 }
 
