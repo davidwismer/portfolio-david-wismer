@@ -134,7 +134,8 @@ svg {
         width: 150px;
     }
 
-    a:hover div {
+    .linkedin:hover div,
+    .github:hover div {
         opacity: 1;
         transition: 1s;
     }
