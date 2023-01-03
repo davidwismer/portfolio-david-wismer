@@ -31,6 +31,7 @@ async function sendContact() {
 }
 const nameFalse = ref(false)
 const emailFalse = ref(false)
+const emailWrong = ref(false)
 const messageFalse = ref(false)
 const translation = ref("0px")
 async function checkValidation() {
@@ -38,38 +39,41 @@ async function checkValidation() {
     if (name.value == '') nameFalse.value = true
     if (email.value == '') emailFalse.value = true
     if (message.value == '') messageFalse.value = true
+    if (email.value != '' && (!email.value.includes('@') || email.value.includes(' ') || !email.value.includes('.'))) emailWrong.value = true
 
-    if(!nameFalse.value && !emailFalse.value && !messageFalse.value){
+    if (!nameFalse.value && !emailFalse.value && !messageFalse.value && !emailWrong.value) {
         return validated.value = true
-    }else{
-        if(translation.value == "0px"){
+    } else {
+        if (translation.value == "0px") {
             const random = Math.floor(Math.random() * 2)
-            if(random) return translation.value = '-120px'
+            if (random) return translation.value = '-120px'
             return translation.value = "120px"
         }
-        if(translation.value == "120px" || translation.value == '-120px'){
+        if (translation.value == "120px" || translation.value == '-120px') {
             return translation.value = "0px"
         }
     }
 }
-async function resetValidation(){
+async function resetValidation() {
     validated.value = false
 }
+//Observe the changes in the form inputs
 watchEffect(() => {
     name.value
-    nameFalse.value=false
+    nameFalse.value = false
 });
 watchEffect(() => {
     email.value
-    emailFalse.value=false
+    emailFalse.value = false
+    emailWrong.value = false
 });
 watchEffect(() => {
     message.value
-    messageFalse.value=false
+    messageFalse.value = false
 });
 watchEffect(() => {
     message.value, email.value, name.value
-    if(!nameFalse.value && !emailFalse.value && !messageFalse.value) translation.value = '0px'
+    if (!nameFalse.value && !emailFalse.value && !messageFalse.value) translation.value = '0px'
 })
 </script>
 
@@ -80,12 +84,15 @@ watchEffect(() => {
         <form onsubmit="return false">
             <input type="text" placeholder="Your Name *" id="name" v-model="name" :class="{ 'nameFalse': nameFalse }" />
             <input type="email" placeholder="Your Email *" id="email" v-model="email"
-                :class="{ 'emailFalse': emailFalse }" />
+                :class="{ 'emailFalse': emailFalse, 'emailWrong': emailWrong }" />
             <textarea placeholder="Your Message *" id="message" cols="30" rows="10" v-model="message"
                 :class="{ 'messageFalse': messageFalse }"></textarea>
-            <button class="submit" @mouseenter="checkValidation()" @mouseleave="resetValidation()" @click="sendContact()" :class="{ 'submitable': validated }">SUBMIT</button>
+            <button class="submit" @mouseenter="checkValidation()" @mouseleave="resetValidation()"
+                @click="sendContact()" :class="{ 'submitable': validated }">SUBMIT</button>
         </form>
-        <div v-if="nameFalse || emailFalse || messageFalse" class="errorMessage">You need to complete the fields first</div>
+        <div v-if="nameFalse || emailFalse || messageFalse" class="errorMessage">You need to complete the fields first
+        </div>
+        <div v-if="emailWrong" class="errorMessage">You need to enter a valid email address</div>
     </section>
 </template>
 
@@ -164,6 +171,10 @@ input::placeholder {
     border: solid .5px red;
 }
 
+.emailWrong {
+    border: solid .5px red;
+}
+
 .messageFalse {
     border: solid .5px red !important;
 }
@@ -185,8 +196,8 @@ input::placeholder {
 }
 
 @media (pointer:coarse) {
-    .submit{
-        transform: translate(0,0)
+    .submit {
+        transform: translate(0, 0)
     }
 }
 
