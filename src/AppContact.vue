@@ -80,7 +80,7 @@ watchEffect(() => {
 <template>
     <section class="contact-content">
         <div class="title">Contact me</div>
-        <div class="subtitle">Any questions or want to work together?</div>
+        <div class="subtitle">Don't hesitate to contact me if you have any questions or want to work together!</div>
         <form onsubmit="return false">
             <input type="text" placeholder="Your Name *" id="name" v-model="name" :class="{ 'nameFalse': nameFalse }" />
             <input type="email" placeholder="Your Email *" id="email" v-model="email"
@@ -226,6 +226,9 @@ input::placeholder {
 
     .subtitle {
         font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
     }
 }
 

@@ -19,6 +19,12 @@ const emit = defineEmits([
     background-color: #373737;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.category:hover{
+    transition: 0.3s;
+    scale: 1.1;
 }
 
 .selected {

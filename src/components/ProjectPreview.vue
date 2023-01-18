@@ -59,7 +59,6 @@ const backgroundImage = `url("${photo.value}")`
     font-family: "League Spartan Regular";
     cursor: pointer;
     justify-content: space-between;
-    transition: 0.3s;
 }
 .hideImage{
     background-image: none;
@@ -73,14 +72,12 @@ const backgroundImage = `url("${photo.value}")`
     flex-direction: column;
     align-items: center;
     margin: 30px;
-    transition: 0.3s;
     color: #A0A1A4;
 }
 
 .more {
     opacity: 0;
     margin-bottom: 30px;
-    transition: 0.3s;
     color: #A0A1A4;
 }
 
