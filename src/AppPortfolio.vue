@@ -56,6 +56,7 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .categories {
@@ -68,7 +69,7 @@ section {
 
 .title {
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 @media screen and (max-width: 450px){
     .title{

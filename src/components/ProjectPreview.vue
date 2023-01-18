@@ -29,7 +29,8 @@ const backgroundImage = `url("${photo.value}")`
 
 <template>
     <section>
-        <div class="container" :class="{'hideImage': hideImage}" @mouseenter="hoverCard()" @mouseleave="hoverCard()" @click="toggleDetails()">
+        <div class="container" :class="{ 'hideImage': hideImage }" @mouseenter="hoverCard()" @mouseleave="hoverCard()"
+            @click="toggleDetails()">
             <div class="text" :class="{ 'show': show }">
                 <div class="title">{{ props.project.title }}</div>
                 <div class="technologies">
@@ -38,19 +39,19 @@ const backgroundImage = `url("${photo.value}")`
             </div>
             <div class="more" :class="{ 'show': show }">More</div>
         </div>
-        <project-details v-if="showDetails" :project="props.project" @suppressDetails="toggleDetails()"></project-details>
+        <project-details v-if="showDetails" :project="props.project"
+            @suppressDetails="toggleDetails()"></project-details>
     </section>
 </template>
 
 <style scoped>
 .container {
+    transition: 0.3s;
+    position: relative;
     width: 300px;
     max-width: 300px;
     height: 300px;
     margin: 20px;
-    background-image: v-bind(backgroundImage);
-    background-size: cover;
-    background-position: center;
     border-radius: 5px;
     border: 1px solid #ACBABF;
     display: flex;
@@ -60,29 +61,48 @@ const backgroundImage = `url("${photo.value}")`
     cursor: pointer;
     justify-content: space-between;
 }
-.hideImage{
-    background-image: none;
-    background-color: white;
+.container::before {
+    content: "";
+    background-image: v-bind(backgroundImage);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 5px;
+}
+
+.hideImage {
+    transition: 0.3s;
+    scale: 1.1;
+}
+.hideImage::before {
+    opacity: 0.2;
 }
 
 .text {
+    position: relative;
     font-size: 18px;
     display: flex;
     opacity: 0;
     flex-direction: column;
     align-items: center;
     margin: 30px;
-    color: #A0A1A4;
+    color: white;
 }
 
 .more {
+    position: relative;
     opacity: 0;
     margin-bottom: 30px;
-    color: #A0A1A4;
+    color: white;
 }
 
 .show {
-    opacity: 100;
+    transition: 0.3s;
+    opacity: 1;
 }
 
 .title {
